@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.blooddonor.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_donorListFragment"
+            app:destination="@id/donorListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_donorFragment"
+            app:destination="@id/donorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/donorFragment"
+        android:name="com.example.blooddonor.DonorFragment"
+        android:label="fragment_donor"
+        tools:layout="@layout/fragment_donor" />
+    <fragment
+        android:id="@+id/donorListFragment"
+        android:name="com.example.blooddonor.DonorListFragment"
+        android:label="fragment_donor_list"
+        tools:layout="@layout/fragment_donor_list" />
+</navigation>
